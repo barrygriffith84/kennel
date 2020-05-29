@@ -6,10 +6,9 @@ class OwnerCard extends Component {
       <div className="card">
         <div className="card-content">
           <picture>
-            <img src={require('./poodle-bob.png')} alt="Poodle Bob" />
+            <img src={window.location.origin + this.props.ownerProp.image} className="icon--owner" alt="error" />
           </picture>
-          <h3>Name: <span className="card-owndername">Poodle Bob</span></h3>
-          <p>Title: Owner/Manager/Dog Groomer/ Dog Trainer/ Friend of All Dogs</p>
+          <h3>Name: <span className="card-ownername">{this.props.ownerProp.name}</span></h3>
         </div>
       </div>
     );

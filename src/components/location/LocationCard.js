@@ -6,10 +6,9 @@ class LocationCard extends Component {
       <div className="card">
         <div className="card-content">
           <picture>
-            <img src={require('./castle.jpg')} alt="Location" />
+            <img src={require('./castle.jpg')} alt="Bob's Dog Palace" />
           </picture>
-          <h3>Name: <span className="card-locationname">Bob's Dog Palace</span></h3>
-          <p>Location: Grayson Ky</p>
+    <h3>Name: <span className="card-locationname">{this.props.locationProp.name}</span></h3>
         </div>
       </div>
     );

@@ -6,14 +6,14 @@ class EmployeeCard extends Component {
       <div className="card">
         <div className="card-content">
           <picture>
-            <img src={require('./slick-rick.png')} alt="Slick Rick" />
+          <img src={window.location.origin + this.props.employeeProp.image} className="icon--employee" alt="error" />
           </picture>
-          <h3>Name: <span className="card-employeename">Slick Rick</span></h3>
-          <p>Title: Hustler</p>
+          <h3>Name: <span className="card-employeename">{this.props.employeeProp.name}</span></h3>
         </div>
       </div>
     );
   }
 }
+
 
 export default EmployeeCard;
