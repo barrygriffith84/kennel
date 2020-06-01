@@ -22,7 +22,8 @@
     "locations": [
         {
             "id": 1,
-            "name": "Bob's Dog Palace"
+            "name": "Bob's Dog Palace",
+            "address": "1600 Pennsylvania Avenue, Grayson, KY, 41143"
         }
     ],
     "owners": [

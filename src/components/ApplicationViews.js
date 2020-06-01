@@ -6,6 +6,8 @@ import AnimalList from './animal/AnimalList'
 import LocationList from './location/LocationList'
 import OwnerList from './owner/OwnerList'
 import EmployeeList from './employee/EmployeeList'
+import AnimalDetail from './animal/AnimalDetail'
+import LocationDetail from './location/LocationDetail'
 
 
 
@@ -17,7 +19,7 @@ class ApplicationViews extends Component {
         <Route exact path="/" render={(props) => {
           return <Home />
         }} />
-        <Route path="/animals" render={(props) => {
+        <Route exact path="/animals" render={(props) => {
           return <AnimalList />
         }} />
         <Route path="/location" render={(props) => {
@@ -28,6 +30,14 @@ class ApplicationViews extends Component {
         }} />
         <Route path="/owners" render={(props) => {
           return <OwnerList />
+        }} />
+        <Route path="/animals/:animalId(\d+)" render={(props) => {
+          console.log("this is props from application views", props)
+          return <AnimalDetail animalId={props.match.params.animalId} />
+        }} />
+         <Route path="/locations/:locationId(\d+)" render={(props) => {
+          console.log("this is props from application views", props)
+          return <LocationDetail locationId={props.match.params.locationId} />
         }} />
       </>
     )
