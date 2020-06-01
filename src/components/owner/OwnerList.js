@@ -9,6 +9,18 @@ import React, { Component } from 'react'
             owners: [],
         }
 
+        deleteOwner = id => {
+            OwnerManager.delete(id)
+            .then(() => {
+              OwnerManager.getAll()
+              .then((newOwners) => {
+                this.setState({
+                    owners: newOwners
+                })
+              })
+            })
+          }
+
     componentDidMount(){
         // console.log("OWNER LIST: ComponentDidMount");
         //getAll from OwnerManager and hang on to that data; put it in state
@@ -26,7 +38,7 @@ import React, { Component } from 'react'
             <div className="container-cards">
                 {this.state.owners.map((currentOwnerInLoop) => {
                 console.log("this is a current Owner in the loop", currentOwnerInLoop)
-                return <OwnerCard key={currentOwnerInLoop.id} ownerProp={currentOwnerInLoop}/>;
+                return <OwnerCard key={currentOwnerInLoop.id} ownerProp={currentOwnerInLoop} removeOwner={this.deleteOwner}/>;
     })}
             </div>
         )

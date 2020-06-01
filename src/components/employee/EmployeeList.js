@@ -9,6 +9,18 @@ import React, { Component } from 'react'
             employees: [],
         }
 
+        deleteEmployee = id => {
+            EmployeeManager.delete(id)
+            .then(() => {
+              EmployeeManager.getAll()
+              .then((newEmployees) => {
+                this.setState({
+                    employees: newEmployees
+                })
+              })
+            })
+          }
+
     componentDidMount(){
         // console.log("EMPLOYEE LIST: ComponentDidMount");
         //getAll from EmployeeManager and hang on to that data; put it in state
@@ -26,7 +38,7 @@ import React, { Component } from 'react'
             <div className="container-cards">
                 {this.state.employees.map((currentEmployeeInLoop) => {
                 console.log("this is a current Employee in the loop", currentEmployeeInLoop)
-                return <EmployeeCard key={currentEmployeeInLoop.id} employeeProp={currentEmployeeInLoop}/>;
+                return <EmployeeCard key={currentEmployeeInLoop.id} employeeProp={currentEmployeeInLoop} removeEmployee={this.deleteEmployee}/>;
     })}
             </div>
         )

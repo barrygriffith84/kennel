@@ -9,6 +9,18 @@ import React, { Component } from 'react'
             locations: [],
         }
 
+        deleteLocation = id => {
+            LocationManager.delete(id)
+            .then(() => {
+              LocationManager.getAll()
+              .then((newLocations) => {
+                this.setState({
+                    locations: newLocations
+                })
+              })
+            })
+          }
+
     componentDidMount(){
         // console.log("LOCATION LIST: ComponentDidMount");
         //getAll from LocationManager and hang on to that data; put it in state
@@ -26,7 +38,7 @@ import React, { Component } from 'react'
             <div className="container-cards">
                 {this.state.locations.map((currentLocationInLoop) => {
                 console.log("this is a current location in the loop", currentLocationInLoop)
-                return <LocationCard key={currentLocationInLoop.id} locationProp={currentLocationInLoop}/>;
+                return <LocationCard key={currentLocationInLoop.id} locationProp={currentLocationInLoop} closeLocation={this.deleteLocation}/>;
     })}
             </div>
         )

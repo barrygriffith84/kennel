@@ -3,27 +3,28 @@
         {
             "id": 1,
             "name": "Doodles",
-            "breed": "Poodle"
+            "breed": "Poodle",
+            "image": "/images/poodle.jpg"
         },
         {
             "id": 2,
             "name": "Decker",
-            "breed": "German Sheperd"
+            "breed": "German Sheperd",
+            "image": "/images/germanshep.jpg"
         },
         {
             "id": 3,
             "name": "Esme",
-            "breed": "Pitbull"
+            "breed": "Pitbull",
+            "image": "/images/pitbull.png"
         }
     ],
-
     "locations": [
         {
             "id": 1,
             "name": "Bob's Dog Palace"
         }
     ],
-
     "owners": [
         {
             "id": 1,
@@ -41,7 +42,6 @@
             "image": "/images/hardcore-henrietta.jpg"
         }
     ],
-
     "employees": [
         {
             "id": 1,
@@ -58,6 +58,5 @@
             "name": "Chuggin Chara",
             "image": "/images/chuggin-chara.jpg"
         }
-
     ]
 }

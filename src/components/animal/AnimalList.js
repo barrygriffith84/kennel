@@ -9,6 +9,16 @@ import React, { Component } from 'react'
             animals: [],
         }
 
+        deleteAnimal = id => {
+            AnimalManager.delete(id)
+            .then(AnimalManager.getAll)
+            .then((newanimals) => {
+                this.setState({
+                    animals: newanimals
+                })
+            })
+        };
+
     componentDidMount(){
         console.log("ANIMAL LIST: ComponentDidMount");
         //getAll from AnimalManager and hang on to that data; put it in state
@@ -18,7 +28,9 @@ import React, { Component } from 'react'
                 animals: animals
             })
         })
-    }
+    };
+
+ 
 
     render(){
         // console.log("ANIMAL LIST: Render");
@@ -27,7 +39,7 @@ import React, { Component } from 'react'
             <div className="container-cards">
                 {this.state.animals.map((currentAnimalInLoop) => {
                 console.log("this is a current animal in the loop", currentAnimalInLoop)
-                return <AnimalCard key={currentAnimalInLoop.id} animalProp={currentAnimalInLoop}/>;
+                return <AnimalCard key={currentAnimalInLoop.id} animalProp={currentAnimalInLoop} dischargeAnimal={this.deleteAnimal}/>;
     })}
             </div>
         )
