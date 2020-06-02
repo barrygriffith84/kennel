@@ -1,63 +1,72 @@
 {
-    "animals": [
-        {
-            "id": 1,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "image": "/images/poodle.jpg"
-        },
-        {
-            "id": 2,
-            "name": "Decker",
-            "breed": "German Sheperd",
-            "image": "/images/germanshep.jpg"
-        },
-        {
-            "id": 3,
-            "name": "Esme",
-            "breed": "Pitbull",
-            "image": "/images/pitbull.png"
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Bob's Dog Palace",
-            "address": "1600 Pennsylvania Avenue, Grayson, KY, 41143"
-        }
-    ],
-    "owners": [
-        {
-            "id": 1,
-            "name": "Poodle Bob",
-            "image": "/images/poodle-bob.png"
-        },
-        {
-            "id": 2,
-            "name": "Melonhead Mark",
-            "image": "/images/melonhead-mark.jpg"
-        },
-        {
-            "id": 3,
-            "name": "Hardcore Henrietta",
-            "image": "/images/hardcore-henrietta.jpg"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Slick Rick",
-            "image": "/images/slick-rick.png"
-        },
-        {
-            "id": 2,
-            "name": "Stoner Steve",
-            "image": "/images/stoner-steve.jpg"
-        },
-        {
-            "id": 3,
-            "name": "Chuggin Chara",
-            "image": "/images/chuggin-chara.jpg"
-        }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "image": "/images/poodle.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperd",
+      "image": "/images/germanshep.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull",
+      "image": "/images/pitbull.png"
+    },
+    {
+      "name": "test",
+      "breed": "test",
+      "id": 4
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Bob's Dog Palace",
+      "address": "1600 Pennsylvania Avenue, Grayson, KY, 41143"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Poodle Bob",
+      "image": "/images/poodle-bob.png"
+    },
+    {
+      "id": 2,
+      "name": "Melonhead Mark",
+      "image": "/images/melonhead-mark.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Hardcore Henrietta",
+      "image": "/images/hardcore-henrietta.jpg"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Slick Rick",
+      "image": "/images/slick-rick.png"
+    },
+    {
+      "id": 2,
+      "name": "Stoner Steve",
+      "image": "/images/stoner-steve.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Chuggin Chara",
+      "image": "/images/chuggin-chara.jpg"
+    },
+    {
+      "name": "barry",
+      "id": 4
+    }
+  ]
 }

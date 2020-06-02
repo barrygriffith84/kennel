@@ -6,7 +6,7 @@ class LocationDetail extends Component {
 
   state = {
       name: "",
-      address: "",
+      address: ""
   }
 
   componentDidMount(){
@@ -16,7 +16,7 @@ class LocationDetail extends Component {
     .then((location) => {
       this.setState({
         name: location.name,
-        address: location.address
+        address: location.address,
       });
     });
   }

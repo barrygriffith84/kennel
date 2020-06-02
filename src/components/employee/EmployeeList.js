@@ -35,12 +35,21 @@ import React, { Component } from 'react'
     render(){
         // console.log("EMPLOYEE LIST: Render");
         return(
+            <>
+            <section className="section-content">
+                    <button type="button"
+                        className="btn"
+                        onClick={() => { this.props.history.push("/employees/new") }}>
+                        Add Employee
+                    </button>
+                </section>
             <div className="container-cards">
                 {this.state.employees.map((currentEmployeeInLoop) => {
                 console.log("this is a current Employee in the loop", currentEmployeeInLoop)
                 return <EmployeeCard key={currentEmployeeInLoop.id} employeeProp={currentEmployeeInLoop} removeEmployee={this.deleteEmployee}/>;
     })}
             </div>
+            </>
         )
     }
 }
