@@ -46,7 +46,7 @@ import React, { Component } from 'react'
             <div className="container-cards">
                 {this.state.employees.map((currentEmployeeInLoop) => {
                 console.log("this is a current Employee in the loop", currentEmployeeInLoop)
-                return <EmployeeCard key={currentEmployeeInLoop.id} employeeProp={currentEmployeeInLoop} removeEmployee={this.deleteEmployee}/>;
+                return <EmployeeCard key={currentEmployeeInLoop.id} employeeProp={currentEmployeeInLoop} removeEmployee={this.deleteEmployee} {...this.props}/>;
     })}
             </div>
             </>

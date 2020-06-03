@@ -6,8 +6,16 @@ class LocationDetail extends Component {
 
   state = {
       name: "",
-      address: ""
+      address: "",
+      loadingStatus: true,
   }
+
+  handleDelete = () => {
+    //invoke the delete function in LocationManger and re-direct to the location list.
+    this.setState({loadingStatus: true})
+    LocationManager.delete(this.props.locationId)
+    .then(() => this.props.history.push("/location"))
+}
 
   componentDidMount(){
     console.log("LocationDetail: ComponentDidMount");
@@ -17,6 +25,7 @@ class LocationDetail extends Component {
       this.setState({
         name: location.name,
         address: location.address,
+        loadingStatus: false
       });
     });
   }
@@ -30,6 +39,8 @@ class LocationDetail extends Component {
           </picture>
             <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Address: {this.state.address}</p>
+            <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Remove</button>
+            <button type="button" onClick={() => { this.props.history.push(`/location/${this.props.locationId}/edit`) }}>Edit</button>
         </div>
       </div>
     );

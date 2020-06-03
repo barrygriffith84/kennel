@@ -8,27 +8,22 @@
     },
     {
       "id": 2,
-      "name": "Decker",
+      "name": "Dicker",
       "breed": "German Sheperd",
-      "image": "/images/germanshep.jpg"
+      "image": "/images/germanShep.jpg"
     },
     {
       "id": 3,
       "name": "Esme",
       "breed": "Pitbull",
       "image": "/images/pitbull.png"
-    },
-    {
-      "name": "test",
-      "breed": "test",
-      "id": 4
     }
   ],
   "locations": [
     {
       "id": 1,
       "name": "Bob's Dog Palace",
-      "address": "1600 Pennsylvania Avenue, Grayson, KY, 41143"
+      "address": "1600 Pennsylvania Avenue, Grayson, KY,  41143"
     }
   ],
   "owners": [
@@ -39,7 +34,7 @@
     },
     {
       "id": 2,
-      "name": "Melonhead Mark",
+      "name": "Melonhead  Mark",
       "image": "/images/melonhead-mark.jpg"
     },
     {
@@ -63,10 +58,6 @@
       "id": 3,
       "name": "Chuggin Chara",
       "image": "/images/chuggin-chara.jpg"
-    },
-    {
-      "name": "barry",
-      "id": 4
     }
   ]
 }

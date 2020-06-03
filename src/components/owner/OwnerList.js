@@ -46,7 +46,7 @@ import React, { Component } from 'react'
             <div className="container-cards">
                 {this.state.owners.map((currentOwnerInLoop) => {
                 console.log("this is a current Owner in the loop", currentOwnerInLoop)
-                return <OwnerCard key={currentOwnerInLoop.id} ownerProp={currentOwnerInLoop} removeOwner={this.deleteOwner}/>;
+                return <OwnerCard key={currentOwnerInLoop.id} ownerProp={currentOwnerInLoop} removeOwner={this.deleteOwner} {...this.props}/>;
     })}
             </div>
             </>
