@@ -4,19 +4,22 @@
       "id": 1,
       "name": "Doodles",
       "breed": "Poodle",
-      "image": "/images/poodle.jpg"
+      "image": "/images/poodle.jpg",
+      "employeeId": 2
     },
     {
       "id": 2,
       "name": "Dicker",
       "breed": "German Sheperd",
-      "image": "/images/germanShep.jpg"
+      "image": "/images/germanShep.jpg",
+      "employeeId": 1
     },
     {
       "id": 3,
       "name": "Esme",
       "breed": "Pitbull",
-      "image": "/images/pitbull.png"
+      "image": "/images/pitbull.png",
+      "employeeId": 3
     }
   ],
   "locations": [
@@ -47,17 +50,23 @@
     {
       "id": 1,
       "name": "Slick Rick",
-      "image": "/images/slick-rick.png"
+      "image": "/images/slick-rick.png",
+      "email": "rick@email.com",
+      "password": "abc123"
     },
     {
       "id": 2,
       "name": "Stoner Steve",
-      "image": "/images/stoner-steve.jpg"
+      "image": "/images/stoner-steve.jpg",
+      "email": "steve@email.com",
+      "password": "abc123"
     },
     {
       "id": 3,
       "name": "Chuggin Chara",
-      "image": "/images/chuggin-chara.jpg"
+      "image": "/images/chuggin-chara.jpg",
+      "email": "chara@email.com",
+      "password": "abc123"
     }
   ]
 }

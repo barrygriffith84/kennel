@@ -30,6 +30,11 @@ update(editedEmployee) {
     },
     body: JSON.stringify(editedEmployee)
   }).then(data => data.json());
+},
+//Gets a single cimployee with a list of their related animals
+getWithAnimals(id) {
+  return fetch(`${remoteURL}/employees/${id}?_embed=animals`)
+          .then(result => result.json())
 }
 }
 

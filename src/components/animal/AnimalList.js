@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //import the components we will need
 import AnimalCard from './AnimalCard'
 import AnimalManager from '../../modules/AnimalManager'
+import EmployeeManager from '../../modules/EmployeeManager'
 
 class AnimalList extends Component {
     //define what this component needs to render
@@ -17,7 +18,7 @@ class AnimalList extends Component {
                 this.setState({
                     animals: animals
                 })
-            })
+            })    
     };
 
 
@@ -38,7 +39,7 @@ class AnimalList extends Component {
                 <div className="container-cards">
                     {this.state.animals.map((currentAnimalInLoop) => {
                         console.log("this is a current animal in the loop", currentAnimalInLoop)
-                        return <AnimalCard key={currentAnimalInLoop.id} animalProp={currentAnimalInLoop} dischargeAnimal={this.deleteAnimal} />;
+                        return <AnimalCard key={currentAnimalInLoop.id} animal={currentAnimalInLoop} dischargeAnimal={this.deleteAnimal} />;
                     })}
                 </div>
             </>
